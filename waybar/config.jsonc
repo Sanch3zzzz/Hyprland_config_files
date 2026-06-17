@@ -1,0 +1,105 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 35,
+    "spacing": 4,
+
+    "modules-left": ["hyprland/workspaces", "hyprland/window", "mpris"],
+    "modules-center": ["clock"],
+    "modules-right": ["cpu", "custom/gpu", "memory", "disk", "temperature",  "network", "bluetooth", "pulseaudio", "tray"],
+    
+    "cpu": {
+        "format": "󰻠  {usage}%",
+        "interval": 2,
+        "tooltip": false
+    },
+
+    "mpris": {
+        "format": "{player_icon}  {title} - {artist}",
+        "format-paused": "󰏤  {title} - {artist}",
+        "player-icons": {
+            "default": "󰎆",
+            "spotify": "",
+            "firefox": "󰈹",
+            "chromium": ""
+        },
+        "max-length": 40,
+        "interval": 2
+    },
+    "memory": {
+        "format": "󰍛  {used:0.1f}G/{total:0.1f}G",
+        "interval": 2
+    },
+    
+    "disk": {
+        "format": "󰋊  {percentage_used}%",
+        "path": "/",
+        "interval": 30
+    },
+    "custom/gpu": {
+        "exec": "~/.config/waybar/gpu.sh",
+        "interval": 2,
+        "format": "{}"
+    },
+    
+    "temperature": {
+        "format": "󰔏  {temperatureC}°C",
+        "critical-threshold": 80,
+        "format-critical": "󰸁  {temperatureC}°C"
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "󰲠", "2": "󰲢", "3": "󰲤", "4": "󰲦", "5": "󰲨",
+            "active": "",
+            "default": ""
+        }
+    },
+
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 50
+    },
+
+    "clock": {
+        "format": "󰥔  {:%H:%M   󰃭  %d/%m/%Y}",
+        "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "network": {
+        "format-wifi": "󰤨  {essid} ({signalStrength}%)",
+        "format-ethernet": "󰈀  {ipaddr}",
+        "format-disconnected": "󰤭  Desconectado",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+        "on-click": "nm-connection-editor"
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "󰝟  Mudo",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "battery": {
+        "format": "{icon}  {capacity}%",
+        "format-charging": "󰂄  {capacity}%",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+    "tray": {
+        "spacing": 10
+    }
+}
+
+	"bluetooth": {
+	    "format": "󰂯",
+	    "format-connected": "󰂱  {device_alias}",
+	    "format-connected-battery": "󰂱  {device_alias} {device_battery_percentage}%",
+	    "on-click": "blueman-manager &",
+	    "on-click-right": "blueman-manager &",
+	    "tooltip-format": "{controller_alias}\n{num_connections} conectado(s)"
+	},
