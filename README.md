@@ -61,7 +61,7 @@ yay -S awww mpvpaper greetd-regreet rofi-theme-selector
    cp -r hypr waybar rofi wlogout starship yazi fish ~/.config/
    cp mimeapps.list ~/.config/
    ```
-5. Cria o script de wallpaper e a pasta de wallpapers (não versionada por serem arquivos grandes):
+5. Cria a pasta de wallpapers (não versionada por serem arquivos grandes):
    ```bash
    mkdir -p ~/Imagens/Wallpapers
    ```
@@ -84,14 +84,18 @@ yay -S awww mpvpaper greetd-regreet rofi-theme-selector
 | Atalho                  | Ação                          |
 |--------------------------|-------------------------------|
 | `SUPER + T`              | Terminal (kitty)              |
-| `SUPER + E`              | Gerenciador de arquivos (yazi)|
+| `SUPER + E`              | Gerenciador de arquivos (kitty + yazi) |
 | `SUPER + Space`          | Menu (rofi)                   |
 | `SUPER + B`              | Navegador (Floorp)             |
 | `SUPER + G`              | Steam                          |
 | `SUPER + F`              | Fullscreen                     |
 | `SUPER + V`              | Toggle float                   |
 | `SUPER + Q`              | Fechar janela                  |
-| `SUPER + X`              | Menu de power (wlogout)        |
+| `SUPER + O`              | Menu de power (wlogout)        |
+| `SUPER + N`              | Painel de notificações (swaync)|
+| `SUPER + M`              | Sair do Hyprland / shutdown    |
+| `SUPER + S`              | Toggle scratchpad              |
+| `SUPER + D`              | Mover janela pro scratchpad    |
 | `SUPER + 1-0`            | Trocar workspace               |
 | `SUPER + SHIFT + 1-0`    | Mover janela pro workspace     |
 | `SUPER + SHIFT + ←↑↓→`   | Mover janela entre monitores   |
