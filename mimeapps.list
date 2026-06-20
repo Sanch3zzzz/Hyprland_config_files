@@ -1,0 +1,16 @@
+[Added Associations]
+application/pdf=one.ablaze.floorp.desktop;
+x-scheme-handler/geo=openstreetmap-geo-handler.desktop;
+x-scheme-handler/mailto=one.ablaze.floorp.desktop;
+
+[Default Applications]
+application/pdf=one.ablaze.floorp.desktop;
+x-scheme-handler/geo=openstreetmap-geo-handler.desktop;
+x-scheme-handler/heroic=com.heroicgameslauncher.hgl.desktop
+x-scheme-handler/mailto=one.ablaze.floorp.desktop;
+video/mp4=vlc.desktop
+video/x-msvideo=vlc.desktop
+image/png=swayimg.desktop
+image/jpeg=swayimg.desktop
+image/webp=swayimg.desktop
+image/gif=swayimg.desktop

@@ -1,7 +1,7 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 35,
+    "height": 30,
     "spacing": 4,
 
     "modules-left": ["hyprland/workspaces", "hyprland/window", "mpris"],
@@ -58,9 +58,9 @@
     },
 
     "hyprland/window": {
-        "format": "{}",
-        "max-length": 50
-    },
+            "format": "{}",
+            "max-length": 50
+        },
 
     "clock": {
         "format": "󰥔  {:%H:%M   󰃭  %d/%m/%Y}",
