@@ -67,4 +67,13 @@
         "format": "󰂯",
         "format-connected": "󰂱  {device_alias}",
         "on-click": "blueman-manager &",
-        "tooltip-format":
+        "tooltip-format": "{controller_alias}\n{num_connections} conectado(s)"
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "󰝟  Mudo",
+        "format-icons": { "default": ["󰕿", "󰖀", "󰕾"] },
+        "on-click": "pavucontrol"
+    }
+}

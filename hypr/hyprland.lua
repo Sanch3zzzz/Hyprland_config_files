@@ -75,7 +75,7 @@ end)
 
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
 
-hl.env("XCURSOR_SIZE", "24")
+hl.env("XCURSOR_SIZE", "20")
 hl.env("HYPRCURSOR_SIZE", "24")
 
 -- Configuracao de veriaveis de Ambiente 
@@ -116,7 +116,7 @@ hl.config({
         gaps_in  = 2,
         gaps_out = 10,
 
-        border_size = 2,
+        border_size = 1,
 
 	col = {
 	    active_border   = { colors = {"rgba(88c0d0ee)", "rgba(5e81acee)"}, angle = 45 },
