@@ -4,11 +4,15 @@
     "output": "HDMI-A-1",
     "height": 35,
     "spacing": 4,
+    "modules-left": ["hyprland/window", "cpu", "memory", "custom/gpu", "disk", "temperature"],
+    "modules-center": ["clock"],
+    "modules-right": ["network", "bluetooth", "pulseaudio", "hyprland/workspaces"],
 
-    "modules-left": ["cpu", "memory", "custom/gpu", "disk", "temperature"],
-	"modules-center": ["clock"],
-	"modules-right": ["hyprland/workspaces"],
-	
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 50
+    },
+
     "hyprland/workspaces": {
         "format": "{icon}",
         "format-icons": {
@@ -49,5 +53,18 @@
         "format": "󰔏  {temperatureC}°C",
         "critical-threshold": 80,
         "format-critical": "󰸁  {temperatureC}°C"
-    }
-}
+    },
+
+    "network": {
+        "format-wifi": "󰤨  {essid} ↑{bandwidthUpBits} ↓{bandwidthDownBits}",
+        "format-ethernet": "󰈀  ↑{bandwidthUpBits} ↓{bandwidthDownBits}",
+        "format-disconnected": "󰤭  Desconectado",
+        "interval": 2,
+        "on-click": "nm-connection-editor"
+    },
+
+    "bluetooth": {
+        "format": "󰂯",
+        "format-connected": "󰂱  {device_alias}",
+        "on-click": "blueman-manager &",
+        "tooltip-format":

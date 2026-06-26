@@ -4,21 +4,13 @@
     "output": "DP-3",
     "height": 35,
     "spacing": 4,
-
-    "modules-left": ["hyprland/window"],
+    "modules-left": [],
     "modules-center": ["clock"],
-    "modules-right": ["mpris", "network", "bluetooth", "pulseaudio", "battery", "tray"],
-
-    "hyprland/window": {
-        "format": "{}",
-        "max-length": 50
-    },
-
+    "modules-right": ["mpris", "battery", "tray"],
     "clock": {
         "format": "󰥔  {:%H:%M   󰃭  %d/%m/%Y}",
         "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>"
     },
-
     "mpris": {
         "format": "{player_icon}  {title} - {artist}",
         "format-paused": "󰏤  {title} - {artist}",
@@ -31,34 +23,10 @@
         "max-length": 40,
         "interval": 2
     },
-
-    "network": {
-        "format-wifi": "󰤨  {essid} ↑{bandwidthUpBits} ↓{bandwidthDownBits}",
-        "format-ethernet": "󰈀  ↑{bandwidthUpBits} ↓{bandwidthDownBits}",
-        "format-disconnected": "󰤭  Desconectado",
-        "interval": 2,
-        "on-click": "nm-connection-editor"
-    },
-
-    "bluetooth": {
-        "format": "󰂯",
-        "format-connected": "󰂱  {device_alias}",
-        "on-click": "blueman-manager &",
-        "tooltip-format": "{controller_alias}\n{num_connections} conectado(s)"
-    },
-
-    "pulseaudio": {
-        "format": "{icon}  {volume}%",
-        "format-muted": "󰝟  Mudo",
-        "format-icons": { "default": ["󰕿", "󰖀", "󰕾"] },
-        "on-click": "pavucontrol"
-    },
-
     "battery": {
         "format": "{icon}  {capacity}%",
         "format-charging": "󰂄  {capacity}%",
         "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
-
     "tray": { "spacing": 10 }
 }
