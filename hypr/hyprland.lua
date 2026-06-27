@@ -53,10 +53,17 @@ local browser = "flatpak run one.ablaze.floorp"
 
 hl.on("hyprland.start", function()
     hl.exec_cmd("bash ~/.config/hypr/scripts/wallpaper.sh")
-    hl.exec_cmd("waybar -c ~/.config/waybar/config-main.jsonc -s ~/.config/waybar/style-main.css")
-    hl.exec_cmd("waybar -c ~/.config/waybar/config-secondary.jsonc -s ~/.config/waybar/style-secondary.css")
+    hl.exec_cmd("bash ~/.config/waybar/launch.sh")
     hl.exec_cmd("swaync")
     hl.exec_cmd("hypridle")
+end)
+
+hl.on("monitor.added", function()
+    hl.exec_cmd("bash ~/.config/waybar/launch.sh")
+end)
+
+hl.on("monitor.removed", function()
+    hl.exec_cmd("bash ~/.config/waybar/launch.sh")
 end)
 -- See https://wiki.hypr.land/Configuring/Basics/Autostart/
 
